@@ -14,24 +14,30 @@ from custom_msgs.msg import TorqueInput, States
 
 class single_inverted_pendulum(Node):
     
-    # Initialize State/s 
-    theta0 = np.pi / 2 # pi, -pi represents upright
+    # # Initialize State/s 
+    theta0 = 0# pi, -pi represents upright
     theta_dot0 = 0.0
+    
+    # Use the following for initial states
+
+    # Part B)
+    # theta0 = np.pi* (np.random.rand()*2 -1) 
+    # theta0 = (theta0 + np.pi)%(2*np.pi) - np.pi
+    # theta_dot0 = 0
     '''
-    Use the following for initial states
-
-    Part B)
-    theta0 = np.pi - (np.random.rand() - 0.5) / 2
-    theta0 = (theta0 + np.pi)%(2*np.pi) - np.pi
-    theta_dot0 = 0
-
     Part C)
     theta0 = 0 - (np.random.rand() - 0.5) / 2
     theta0 = (theta0 + np.pi)%(2*np.pi) - np.pi
     theta_dot0 = 0
 
     You can keep theta_dot0 non-zero for more challenging exercise:)
+    
+    #Part D
+    theta0 = np.pi - (np.random.rand() - 0.5) / 2
+    theta0 = (theta0 + np.pi)%(2*np.pi) - np.pi
+    theta_dot0 = 0
     '''
+    
     # Input/s
     torque_value = 0.0
 
