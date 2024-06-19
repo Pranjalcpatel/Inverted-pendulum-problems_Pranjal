@@ -17,7 +17,7 @@
 1. Clone this repository in /src folder of your ros2 workspace
 2. Build and source the workspace. Navigate to your workspace directory and run
 ```
-colcon build --symlink--install
+colcon build --symlink-install
 source install/setup.bash
 ```
 3. You can now launch the simulation
