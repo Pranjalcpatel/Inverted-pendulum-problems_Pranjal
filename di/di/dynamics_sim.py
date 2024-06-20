@@ -100,7 +100,7 @@ class DoubleInvertedPendulum(Node):
         pendulum_marker = Marker()
         pendulum_marker.header.frame_id = "map"
         pendulum_marker.id = self.obj_id
-        pendulum_marker.type = Marker.LINE_STRIP
+        pendulum_marker.type = Marker.LINE_LIST
         pendulum_marker.action = Marker.ADD
         pendulum_marker.pose.orientation.w = 1.0
         pendulum_marker.scale.x = 0.05
@@ -120,7 +120,7 @@ class DoubleInvertedPendulum(Node):
         point_3.y = point_2.y - self.l2 * cos(self.theta2)
         point_3.z = 0.0
 
-        pendulum_marker.points = [point_1, point_2, point_3]
+        pendulum_marker.points = [point_1, point_2, point_2, point_3]
 
         pendulum_marker.color.r = 1.0
         pendulum_marker.color.g = 0.0
