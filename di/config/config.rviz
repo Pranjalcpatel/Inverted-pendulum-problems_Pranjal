@@ -52,7 +52,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /pendulum_viz
+        Value: /double_pendulum_viz
       Value: true
   Enabled: true
   Global Options:
